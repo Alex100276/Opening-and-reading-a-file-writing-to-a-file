@@ -29,7 +29,11 @@ def get_cook_book():  # функция для получения словаря
         return cook_book  # возвращаем словарь
 
 
+print(get_cook_book())
+print()
 # Задание №2
+
+
 def get_shop_list_by_dishes(dishes: list, person_count: int):  # функция для получения списка покупок
     res = {}  # создаем словарь
     for dish in dishes:  # перебираем блюда
@@ -46,6 +50,9 @@ def get_shop_list_by_dishes(dishes: list, person_count: int):  # функция 
             return f'Блюдо "{dish}" отсутствует в кулинарной книге!'  # если блюда нет в кулинарной книге
     return res
 
+
+print(get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2))
+print()
 
 # Задание №3
 
@@ -71,7 +78,3 @@ for file in txt_files:
         for file_data in file_list:  # Записываем в файл
             result_file.write((" ".join(file_data[2]))+'\n')
 print('Файлы объединены!')  # Выводим сообщение об успешной записи
-
-print(get_cook_book())
-print()
-print(get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2))
